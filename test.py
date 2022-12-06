@@ -40,7 +40,7 @@ def checkFiles():
 
     files = [f for f in os.listdir('.') if os.path.isfile(f)]
     txt = "This is the file {something}: "
-    print(txt.format(files))
+    print(txt.format(something=files))
     for f in files:
         if f.endswith('.sql'):
             print(f)
@@ -69,7 +69,7 @@ def userInput(fileName, sqlquery):
     author = "Pero"
     date = "10102000"
     description = "This is sql file"
-    print(header.format(author, date, description))
+    print(header.format(author=author, date=date, description=description))
     editFile(fileName, sqlquery)
 
 
