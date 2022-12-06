@@ -68,8 +68,10 @@ def fillHeader(fileName, sqlquery):
 
 def editFile(fileName, sqlquery, changedHeader):
     with open(fileName, 'w') as f:
+        
         formated = changedHeader + "\n" + sqlquery
-        # print("FORMATED:\n\n " + formated + "\n\n")
+
+        print("FORMATED:\n\n " + formated + "\n\n")
         f.write(formated)
         f.close()
 
