@@ -2,10 +2,13 @@
 
 # Remove last commit by using: git reset --soft HEAD^
 
-
+import github 
 import os
 import sys
 from datetime import date
+g = github.Github(os.getenv ("GITHUB_TOKEN"))
+repo = g.get_repo("PatrikEdelenji/git-hooks")
+branch = repo.get_branch ("main")
 
 header = """/*
          ===========================================================
@@ -66,7 +69,7 @@ def userInput(fileName, sqlquery):
     # description = input("Short summary of current query: ")
 
     # sys.stdin = open("COM1:")
-    author = "Pero"
+    author = branch.commit.author.login
     date = "10102000"
     description = "This is sql file"
     print(header.format(author=author, date=date, description=description))
