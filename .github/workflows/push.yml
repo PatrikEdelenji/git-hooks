@@ -25,5 +25,8 @@ jobs:
         run: echo "$GITHUB_CONTEXT"
 
       # Runs a single command using the runners shell
+      - name: Install package
+        run: |
+          python -m pip install pygithub
       - name: Run a one-line script
         run: python test.py
