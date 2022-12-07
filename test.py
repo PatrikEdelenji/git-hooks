@@ -1,6 +1,6 @@
 # Remove last commit by using: git reset --soft HEAD^
 
-import github 
+import github
 import os
 import sys
 from datetime import date
