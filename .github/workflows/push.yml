@@ -36,15 +36,20 @@ jobs:
       - name: Run a one-line script
         run: python test.py
 
-      - name: check for changes
-        run: git status
+      # - name: check for changes
+      #   run: git status
 
-      - name: add changes to commit
-        run: git add .
+      # - name: add changes to commit
+      #   run: git add .
 
-      - name: commit changes
-        run: git commit -m "Header auto update for .SQL files"
+      # - name: commit changes
+      #   run: git commit -m "Header auto update for .SQL files"
 
-      - name: push changes
-        run: git push origin main
+      # - name: push changes
+      #   run: git push origin main
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+      # Optional. Commit message for the created commit.
+      # Defaults to "Apply automatic changes"
+      commit_message: Header auto update for .SQL files
 
