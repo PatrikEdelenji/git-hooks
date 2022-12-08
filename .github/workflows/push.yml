@@ -36,21 +36,25 @@ jobs:
       - name: Run a one-line script
         run: python test.py
 
-      - name: Setup for commit
-        run: |
-        git config --global user.email "${GH_USERNAME}@iolap.com"
-        git config --global user.name "${GH_USERNAME}"
+      # - name: Setup for commit
+      #   run: |
+      #   git config --global user.email "${GH_USERNAME}@iolap.com"
+      #   git config --global user.name "${GH_USERNAME}"
 
-      - name: check for changes
-        run: git status
+      # - name: check for changes
+      #   run: git status
 
-      - name: add changes to commit
-        run: git add .
+      # - name: add changes to commit
+      #   run: git add .
 
-      - name: commit changes
-        run: git commit -m "Header auto update for .SQL files"
+      # - name: commit changes
+      #   run: git commit -m "Header auto update for .SQL files"
 
-      - name: push changes
-        run: git push origin main
+      # - name: push changes
+      #   run: git push origin main
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Auto changes
 
 
