@@ -2,7 +2,7 @@
          ===========================================================
          HEADER
 
-         Author: <bound method Github.get_user of <github.MainClass.Github object at 0x0000021D9AC93FD0>>
+         Author: AuthenticatedUser(login=None)
 
          Date: 08/12/2022
 
@@ -15,9 +15,9 @@
          ===========================================================
          HEADER
 
-         Author: PatrikEdelenji
+         Author: <bound method Github.get_user of <github.MainClass.Github object at 0x000001A9A12E3FD0>>
 
-         Date: 06/12/2022
+         Date: 08/12/2022
 
          Description: This is sql file
 

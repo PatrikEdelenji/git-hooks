@@ -58,7 +58,8 @@ def fillHeader(fileName, sqlquery):
     # description = input("Short summary of current query: ")
 
     # sys.stdin = open("COM1:")
-    author = g.get_user
+    author = g.get_user()
+    author = author.login()
     date = d1
     description = "This is sql file"
     # print(header.format(author=author, date=date, description=description))
