@@ -8,6 +8,12 @@ g = Github(os.getenv ("GITHUB_TOKEN"))
 repo = g.get_repo("PatrikEdelenji/git-hooks")
 branch = repo.get_branch ("main")
 
+header_check = """/*
+         ===========================================================
+         HEADER
+
+         Author:"""
+
 header = """/*
          ===========================================================
          HEADER
@@ -36,13 +42,16 @@ def checkFiles():
     # print(txt.format(something=files))
     for f in files:
         if f.endswith('.sql'):
-            print(f)
-            readFile(f)
+                print(f)
+                readFile(f)
 
 
 def readFile(fileName):
     with open(fileName, 'r') as f:
         sqlquery = f.read()
+        if header_check in sqlquery:
+            print("File contains header")
+            return 0
         # print(sqlquery)
         f.close()
         fillHeader(fileName, sqlquery)
