@@ -36,12 +36,12 @@ jobs:
       - name: Run a one-line script
         run: python test.py
 
-      - name: Commit report
-        run: |
-          git config --global user.name "${{ github.actor }}"
-        # git config --global user.email "username@users.noreply.github.com"
-          git add .
-          git commit -m "Automated changes to SQL files"
-          git push
+      # - name: Commit report
+      #   run: |
+      #     git config --global user.name "${{ github.actor }}"
+      #   # git config --global user.email "username@users.noreply.github.com"
+      #     git add .
+      #     git commit -m "Automated changes to SQL files"
+      #     git push
 
 
