@@ -39,6 +39,12 @@ jobs:
       - name: check for changes
         run: git status
 
-      - name: check for changes
-        run: git status
+      - name: add changes to commit
+        run: git add .
+
+      - name: commit changes
+        run: git commit -m "Header auto update for .SQL files"
+
+      - name: push changes
+        run: git push origin main
 
