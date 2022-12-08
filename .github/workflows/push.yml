@@ -48,8 +48,6 @@ jobs:
       # - name: push changes
       #   run: git push origin main
       - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-      # Optional. Commit message for the created commit.
-      # Defaults to "Apply automatic changes"
-      commit_message: Header auto update for .SQL files
+      with:
+        commit_message: Apply php-cs-fixer changes
 
