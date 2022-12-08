@@ -11,4 +11,4 @@
          ===========================================================
 */
          
-SELECT * FROM SQL_FILE_1
+SELECT * FROM SQL_FILE_1 blabla
