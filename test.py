@@ -1,11 +1,10 @@
 # Remove last commit by using: git reset --soft HEAD^
 
-import github
 from github import Github
 import os
 import sys
 from datetime import date
-g = github.Github(os.getenv ("GITHUB_TOKEN"))
+g = Github(os.getenv ("GITHUB_TOKEN"))
 repo = g.get_repo("PatrikEdelenji/git-hooks")
 branch = repo.get_branch ("main")
 
