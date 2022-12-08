@@ -38,7 +38,7 @@ jobs:
 
       - name: Setup for commit
         run: |
-        git config --global user.email "${{github.actor}}@iolap.com"
+        git config --global user.email "${GH_USERNAME}@iolap.com"
         git config --global user.name "${GH_USERNAME}"
 
       - name: check for changes
