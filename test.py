@@ -58,7 +58,7 @@ def fillHeader(fileName, sqlquery):
     # description = input("Short summary of current query: ")
 
     # sys.stdin = open("COM1:")
-    author = branch.commit.author.login
+    author = g.get_user
     date = d1
     description = "This is sql file"
     # print(header.format(author=author, date=date, description=description))
